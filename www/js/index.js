@@ -1,22 +1,50 @@
-/*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
-var app = {
+const API_KEY =  '563492ad6f91700001000001e708769464ef42f9b6aa7ec6da0c1d7e';
+var image = '';
+
+
+$(document).ready(function () {
+    $("#form").submit(function (event) {
+        event.preventDefault()
+
+        var search = $("input:text").val()
+
+        imagesearch()
+
+    })
+
+    function imagesearch() {
+        $.ajax({
+            method: 'GET',
+            beforeSend: function (xhr) {
+                xhr.setRequestHeader ("Authorization", API_KEY);
+            },
+            url: "https://api.pexels.com/v1/search?query="+search.value+"&per_page=5&page=1",
+            success: function (data){
+                console.log(data)
+                //alert(search.value)
+                data.photos.forEach(photo => {
+                    image= `
+                        <img src="${photo.src.original}"/>
+
+                        `
+                        $("#images").append(image)
+                });
+            },
+            error: function(error){
+                console.log(error);
+        }
+        });
+
+    }
+
+
+})
+
+
+
+
+
+/*var app = {
     // Application Constructor
     initialize: function() {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
@@ -43,4 +71,4 @@ var app = {
     }
 };
 
-app.initialize();
+app.initialize();*/
