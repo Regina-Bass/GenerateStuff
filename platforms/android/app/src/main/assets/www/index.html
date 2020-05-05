@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'" />
         <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-2jg33yU5owQ8LoyZ6d08d2-lX6e5kSE"></script>
         <link rel="stylesheet" type="text/css" href="css/index.css">
         <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <title>Dashboard</title>
@@ -13,8 +12,9 @@
         <div class="main">  
             <h1>Generate Stuff!</h1>
             <h2>Maps</h2>
-            <p>A paragraph here</p>
-            <h2>Images</h2>
+                <canvas id="map_canvas" style="width: 100%; height:80%"></canvas>
+                <button class="btn-dark btn-lg" id="button1"> Update Map</button>
+             <h2>Images</h2>
             
             <form id="form">
                 <div class="form-group">
@@ -38,6 +38,7 @@
         </div>
     </body>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         
 

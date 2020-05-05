@@ -15,4 +15,6 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <preference name="GOOGLE_MAPS_ANDROID_API_KEY" value="AIzaSyD-2jg33yU5owQ8LoyZ6d08d2-lX6e5kSE" />
+    <preference name="GOOGLE_MAPS_IOS_API_KEY" value="AIzaSyD-2jg33yU5owQ8LoyZ6d08d2-lX6e5kSE" />
 </widget>

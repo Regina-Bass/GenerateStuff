@@ -6,12 +6,13 @@ body{
 }
 
 h1{
-    margin-top: 10%;
+    margin-top: 3% !important;
+    color:#41b383;
 }
 h2 {
     text-transform:uppercase;
     color:#41b383;
-    margin-top: 4%;
+    margin-top: 2% !important;
   
 }
 
@@ -21,4 +22,10 @@ img{
 }
 span {
     padding-right: 5%;
+}
+
+canvas{
+    width: 90%;
+    margin: 0 5%;
+    border: 1px solid black;
 }

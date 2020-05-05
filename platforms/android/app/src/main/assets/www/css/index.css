@@ -22,3 +22,7 @@ img{
 span {
     padding-right: 5%;
 }
+
+canvas{
+    border: 1px solid black;
+}
