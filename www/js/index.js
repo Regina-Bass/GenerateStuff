@@ -12,6 +12,7 @@ $(document).ready(function () {
 
     })
 
+
     function imagesearch() {
         $.ajax({
             method: 'GET',
@@ -27,7 +28,11 @@ $(document).ready(function () {
                         <img src="${photo.src.original}"/>
 
                         `
-                        $("#images").append(image)
+                    description = `
+                        <p> Author: ${photo.photographer}  <span></span>  URL:${photo.photographer_url} <span></span>  Image ID:${photo.id}  </p>
+                    `
+                    $("#images").append(image)
+                    $("#images").append(description)
                 });
             },
             error: function(error){
