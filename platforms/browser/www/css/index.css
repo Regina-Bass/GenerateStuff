@@ -12,8 +12,6 @@ h2 {
     text-transform:uppercase;
     color:#41b383;
     margin-top: 4%;
-    margin-left: 20%;
-    text-align: start;
   
 }
 
@@ -22,5 +20,5 @@ img{
     padding: 5% 15%;
 }
 span {
-    width: 30px;
+    padding-right: 5%;
 }
